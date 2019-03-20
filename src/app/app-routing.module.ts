@@ -4,17 +4,17 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
-  {
-    path: 'home',
-    loadChildren: './home/home.module#HomePageModule'
-  },
-  {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  }
+
+  { path: 'mapa', loadChildren: './pages/indicadores/mapa/mapa.module#MapaPageModule' },
+  { path: 'lista-indicadores', loadChildren: './pages/indicadores/lista-indicadores/lista-indicadores.module#ListaIndicadoresPageModule' },
+  { path: 'graficos', loadChildren: './pages/indicadores/graficos/graficos.module#GraficosPageModule' },
+  { path: 'inicio', loadChildren: './inicio/inicio.module#InicioPageModule' }
+
+
+
 ];
 
 @NgModule({
