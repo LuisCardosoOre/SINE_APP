@@ -1,9 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>lista_indicadores</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{myId}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+
+    <ion-list >
+        <ion-item detail (click)="onClick($event)">
+        <ion-icon slot="start" name="stats"></ion-icon>  
+        <ion-label>Consultas</ion-label>
+        </ion-item>
+        <ion-item detail>
+            <ion-icon slot="start" name="stats"></ion-icon>  
+            <ion-label>Egresos</ion-label>
+            </ion-item>
+      
+      </ion-list>
 
 </ion-content>

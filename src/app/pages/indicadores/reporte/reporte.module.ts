@@ -1,0 +1,36 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+
+import { IonicModule } from '@ionic/angular';
+
+import { ReportePage } from './reporte.page';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: ReportePage,
+    children: [
+      {
+        path: 'datos',
+        loadChildren: '../indicadores/avatar/avatar.module#AvatarPageModule'
+      },
+      {
+        path: 'grafico',
+        loadChildren: '../indicadores/grafico/grafico.module#GraficoPageModule'
+      }
+    ]
+  }
+];
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    RouterModule.forChild(routes)
+  ],
+  declarations: [ReportePage]
+})
+export class ReportePageModule {}

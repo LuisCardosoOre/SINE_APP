@@ -11,7 +11,9 @@ const routes: Routes = [
   { path: 'mapa', loadChildren: './pages/indicadores/mapa/mapa.module#MapaPageModule' },
   { path: 'lista-indicadores', loadChildren: './pages/indicadores/lista-indicadores/lista-indicadores.module#ListaIndicadoresPageModule' },
   { path: 'graficos', loadChildren: './pages/indicadores/graficos/graficos.module#GraficosPageModule' },
-  { path: 'inicio', loadChildren: './inicio/inicio.module#InicioPageModule' }
+  { path: 'inicio', loadChildren: './inicio/inicio.module#InicioPageModule' },  { path: 'reporte', loadChildren: './pages/reporte/reporte.module#ReportePageModule' },
+  { path: 'reporte', loadChildren: './pages/indicadores/reporte/reporte.module#ReportePageModule' }
+
 
 
 

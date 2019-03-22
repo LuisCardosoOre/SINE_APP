@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"> </ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Reporte {{myId}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- <ion-content>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+          <ion-icon name="open"></ion-icon>
+        </ion-fab-button>
+
+        <ion-fab-list side = "top">
+            <ion-fab-button > 
+              <ion-icon name="paper"></ion-icon> 
+              
+            </ion-fab-button>
+            <ion-fab-button> 
+              <ion-icon name="pie"></ion-icon>
+             
+            </ion-fab-button>
+           
+          </ion-fab-list>
+
+    </ion-fab>
+   
+
+</ion-content> -->
+<ion-tabs>
+  
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="datos">
+       
+        <ion-icon name="paper"></ion-icon>
+        <ion-label>Datos</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="grafico" >
+          <ion-icon name="pie"></ion-icon>
+          <ion-label>Gráfico</ion-label>
+        </ion-tab-button>
+  
+      
+    </ion-tab-bar>
+  </ion-tabs> 
