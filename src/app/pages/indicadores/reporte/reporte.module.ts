@@ -10,15 +10,19 @@ import { ReportePage } from './reporte.page';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'account'
+  },
+  {
+    path: '',
     component: ReportePage,
     children: [
       {
-        path: 'datos',
-        loadChildren: '../indicadores/avatar/avatar.module#AvatarPageModule'
+        path: 'datos/:id',
+        loadChildren: '../datos/datos.module#DatosPageModule'
       },
       {
-        path: 'grafico',
-        loadChildren: '../indicadores/grafico/grafico.module#GraficoPageModule'
+        path: 'grafico/:id',
+        loadChildren: '../grafico/grafico.module#GraficoPageModule'
       }
     ]
   }
@@ -33,4 +37,7 @@ const routes: Routes = [
   ],
   declarations: [ReportePage]
 })
-export class ReportePageModule {}
+
+export class ReportePageModule {
+
+}

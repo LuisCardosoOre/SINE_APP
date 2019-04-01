@@ -8,17 +8,58 @@
 </ion-header>
 
 <ion-content padding>
-
+  
+<ion-note color="primary">Asegurados</ion-note>
     <ion-list >
-        <ion-item detail (click)="onClick($event)">
+        <ion-item detail (click)="onClick($event)" class="fa-fa-chevron-down">
         <ion-icon slot="start" name="stats"></ion-icon>  
-        <ion-label>Consultas</ion-label>
+        <ion-label>Por Afiliados</ion-label>
         </ion-item>
         <ion-item detail>
             <ion-icon slot="start" name="stats"></ion-icon>  
-            <ion-label>Egresos</ion-label>
-            </ion-item>
-      
+            <ion-label>Por Tipo de Seguro</ion-label>
+        </ion-item>
+        <ion-item detail>
+          <ion-icon slot="start" name="stats"></ion-icon>  
+          <ion-label>Por Redes</ion-label>
+      </ion-item>
+      <ion-item detail>
+        <ion-icon slot="start" name="stats"></ion-icon>  
+        <ion-label>Por Edad y Sexo</ion-label>
+    </ion-item>
+    <ion-item detail>
+      <ion-icon slot="start" name="stats"></ion-icon>  
+      <ion-label>Por Nivel de Atención</ion-label>
+  </ion-item>
       </ion-list>
+      
+
+      <ion-note color="primary">Personal</ion-note>
+      <ion-list class="accordion-list" >
+          <ion-item detail (click)="onClick($event)" class="fa-fa-chevron-down">
+          <ion-icon slot="start" name="stats"></ion-icon>  
+          <ion-label>Por Tipo Regimen</ion-label>
+          </ion-item>
+          <ion-item detail>
+              <ion-icon slot="start" name="stats"></ion-icon>  
+              <ion-label>Por Tipo de Seguro</ion-label>
+          </ion-item>
+          <ion-item detail>
+            <ion-icon slot="start" name="stats"></ion-icon>  
+            <ion-label>Por Cargo</ion-label>
+        </ion-item>
+        <ion-item detail>
+          <ion-icon slot="start" name="stats"></ion-icon>  
+          <ion-label>Personal Médico</ion-label>
+      </ion-item>
+      <ion-item detail>
+        <ion-icon slot="start" name="stats"></ion-icon>  
+        <ion-label>Por Nivel de Atención</ion-label>
+    </ion-item>
+        </ion-list>
+     
+     
+     
+
 
 </ion-content>

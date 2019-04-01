@@ -7,8 +7,8 @@ import { NavParams } from '@ionic/angular';
 
 @Component({
   selector: 'app-lista-indicadores',
-  templateUrl: './pages/lista-indicadores.page.html',
-  styleUrls: ['./pages/lista-indicadores.page.scss'],
+  templateUrl: './lista-indicadores.page.html',
+  styleUrls: ['./lista-indicadores.page.scss'],
 })
 export class ListaIndicadoresPage implements OnInit {
   myId = null;
@@ -28,11 +28,11 @@ export class ListaIndicadoresPage implements OnInit {
 
   }
 
-  async onClick() {
+   async onClick() {
 
-    return this.router.navigate(['/reporte/' + this.myId  , {locs: this.myId}]);
+    return this.router.navigateByUrl( '/reporte/' + this.myId + '/datos/' + this.myId);
 
-  }
+  } 
 
 
 
