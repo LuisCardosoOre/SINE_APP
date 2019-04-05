@@ -32,7 +32,7 @@ export class ListaIndicadoresPage implements OnInit {
 
     return this.router.navigateByUrl( '/reporte/' + this.myId + '/datos/' + this.myId);
 
-  } 
+  }
 
 
 

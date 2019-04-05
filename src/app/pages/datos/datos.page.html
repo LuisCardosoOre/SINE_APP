@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+  
+  </ion-toolbar>
+  </ion-header>
+  
+  <ion-content >
+    <ion-card>
+      
+      <ion-item color="primary">
+        <ion-icon color="light" slot="start" name="analytics"></ion-icon>
+        <ion-label>Marcador</ion-label>
+      </ion-item>
+  
+      <ion-card-content>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam eum nihil nemo? Rem alias illo corrupti facere dignissimos quidem dolorum sit recusandae. Molestiae recusandae ab quibusdam, dolor consectetur voluptas praesentium!
+        </ion-card-content>
+  
+      </ion-card>
+
+      <ion-card *ngFor="let item of [1,2,3]; let i = index">
+      
+        <ion-item color="primary" >
+          <ion-icon color="light" slot="start" name="analytics"></ion-icon>
+          <ion-label>{{i}}</ion-label>
+        </ion-item>
+    
+        <ion-card-content>
+           {{item}}
+          </ion-card-content>
+    
+        </ion-card>
+      
+
+  </ion-content>
+  

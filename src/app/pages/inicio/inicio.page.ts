@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
+  componentes: Componente [] = [
+  {
+    icon: 'flag',
+    name: 'Mapa',
+    redirectTo: '/mapa'
+
+  }
+
+];
+
   constructor() { }
 
   ngOnInit() {
   }
 
 }
+interface Componente {
+  icon: String;
+  name: String;
+  redirectTo: String; }
