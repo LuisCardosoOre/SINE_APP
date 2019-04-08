@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'reporte/:id', loadChildren: './pages/reporte/reporte.module#ReportePageModule' },
   { path: 'grafico', loadChildren: './pages/grafico/grafico.module#GraficoPageModule' },
   { path: 'datos', loadChildren: './pages/datos/datos.module#DatosPageModule' },
-  { path: 'prueba', loadChildren: './pages/prueba/prueba.module#PruebaPageModule' }
+  { path: 'prueba', loadChildren: './pages/prueba/prueba.module#PruebaPageModule' },
+  { path: 'principal', loadChildren: './pages/principal/principal.module#PrincipalPageModule' }
 
 ];
 

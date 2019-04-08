@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { text } from '@angular/core/src/render3';
 import { format } from 'url';
-import { NavParams } from '@ionic/angular';
+import { NavParams, NavController } from '@ionic/angular';
 
 
 @Component({
@@ -13,7 +13,8 @@ import { NavParams } from '@ionic/angular';
 export class ListaIndicadoresPage implements OnInit {
   myId = null;
   nombre = null;
-  constructor(private activatedRoute: ActivatedRoute, public router: Router, private activeRoute: ActivatedRoute) {
+  constructor(private activatedRoute: ActivatedRoute, public router: Router, private activeRoute: ActivatedRoute, 
+    public navCtrl: NavController) {
      //this.router.navigate(['/grafico'  , {nombre: this.myId}]);
 
    }
@@ -28,12 +29,16 @@ export class ListaIndicadoresPage implements OnInit {
 
   }
 
-   async onClick() {
-
-    return this.router.navigateByUrl( '/reporte/' + this.myId + '/datos/' + this.myId);
-
+   async onClickAfiliados() {
+    let Tipo = 'Afiliados';
+   //return this.router.navigateByUrl( '/reporte/' + this.myId + '/datos/' + this.myId);
+  this.router.navigate(['/reporte/' + this.myId + '/datos/' + this.myId, { Tipo }]);
   }
 
-
+  async onClickTipoSeguro() {
+    let Tipo = 'TipoSeguro';
+   //return this.router.navigateByUrl( '/reporte/' + this.myId + '/datos/' + this.myId);
+  this.router.navigate(['/reporte/' + this.myId + '/datos/' + this.myId, { Tipo }]);
+  }
 
 }

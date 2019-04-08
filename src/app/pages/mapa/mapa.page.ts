@@ -35,7 +35,7 @@ export class MapaPage implements OnInit {
 
     this.Nombre_Red = event.toElement.id;
     this.getDataRed(this.Nombre_Red);
-    
+
 
   }
 

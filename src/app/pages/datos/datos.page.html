@@ -5,28 +5,37 @@
   </ion-header>
   
   <ion-content >
-    <ion-card>
-      
-      <ion-item color="primary">
-        <ion-icon color="light" slot="start" name="analytics"></ion-icon>
-        <ion-label>Marcador</ion-label>
-      </ion-item>
-  
-      <ion-card-content>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam eum nihil nemo? Rem alias illo corrupti facere dignissimos quidem dolorum sit recusandae. Molestiae recusandae ab quibusdam, dolor consectetur voluptas praesentium!
-        </ion-card-content>
-  
-      </ion-card>
+    
+    <ion-grid >
+      <ion-row >
+                
+        
+        <ion-col  style="border:solid 1px #F0EBE9;" >
+           <div> <strong><ion-label style = "font-size: 12px; font-family: sans-serif;" color="primary" slot="start">Perú </ion-label></strong></div>
+           <div> <ion-label style = "font-size: 11px; font-family: sans-serif;">{{this.tipoVariable}}: {{this.ValorVariableP}}</ion-label></div>
+</ion-col>
+      <ion-col style="border:solid 1px #F0EBE9;" >
 
-      <ion-card *ngFor="let item of [1,2,3]; let i = index">
+          <div > <strong><ion-label style = "font-size: 12px;" color="primary" slot="start">Red: {{Nombre_Red}} </ion-label></strong></div>
+          <div> <ion-label style = "font-size: 11px; font-family: sans-serif;">{{this.tipoVariable}}: {{ValorVariableR}} </ion-label></div>
+        </ion-col>
+        <ion-col style="border:solid 1px #F0EBE9;" >
+
+          <div > <strong><ion-label style = "font-size: 12px;" color="primary" slot="start">Diferencia Perú % </ion-label></strong></div>
+          <div> <ion-label style = "font-size: 11px; font-family: sans-serif;">{{this.tipoVariable}}: {{(this.ValorVariableR/this.ValorVariableP) | percent:'1.2-2'}}</ion-label></div>
+        </ion-col>
+         </ion-row>
+      </ion-grid>
+
+      <ion-card *ngFor="let item of nombre; let i of [1,2,3]">
       
         <ion-item color="primary" >
           <ion-icon color="light" slot="start" name="analytics"></ion-icon>
-          <ion-label>{{i}}</ion-label>
+          <ion-label>{{item}}</ion-label>
         </ion-item>
     
         <ion-card-content>
-           {{item}}
+           {{i}}
           </ion-card-content>
     
         </ion-card>
