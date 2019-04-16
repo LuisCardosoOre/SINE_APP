@@ -22,4 +22,15 @@ export class RestService {
     });
   }
 
+  getDataTotal() {
+    return new Promise(resolve => {
+      this.http.get(apiUrl + 'pt6zc').subscribe(data2 => {
+        resolve(data2);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+
 }

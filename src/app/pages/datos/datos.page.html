@@ -12,30 +12,30 @@
         
         <ion-col  style="border:solid 1px #F0EBE9;" >
            <div> <strong><ion-label style = "font-size: 12px; font-family: sans-serif;" color="primary" slot="start">Perú </ion-label></strong></div>
-           <div> <ion-label style = "font-size: 11px; font-family: sans-serif;">{{this.tipoVariable}}: {{this.ValorVariableP}}</ion-label></div>
+           <div> <ion-label style = "font-size: 11px; font-family: sans-serif;">Total Perú: {{this.ValorVariableP}}</ion-label></div>
 </ion-col>
       <ion-col style="border:solid 1px #F0EBE9;" >
 
           <div > <strong><ion-label style = "font-size: 12px;" color="primary" slot="start">Red: {{Nombre_Red}} </ion-label></strong></div>
-          <div> <ion-label style = "font-size: 11px; font-family: sans-serif;">{{this.tipoVariable}}: {{ValorVariableR}} </ion-label></div>
+          <div> <ion-label style = "font-size: 11px; font-family: sans-serif;">Total Red: {{ValorVariableR}} </ion-label></div>
         </ion-col>
         <ion-col style="border:solid 1px #F0EBE9;" >
 
           <div > <strong><ion-label style = "font-size: 12px;" color="primary" slot="start">Diferencia Perú % </ion-label></strong></div>
-          <div> <ion-label style = "font-size: 11px; font-family: sans-serif;">{{this.tipoVariable}}: {{(this.ValorVariableR/this.ValorVariableP) | percent:'1.2-2'}}</ion-label></div>
+          <div> <ion-label style = "font-size: 11px; font-family: sans-serif;">Variación %: {{(this.ValorVariableR/this.ValorVariableP) | percent:'1.2-2'}}</ion-label></div>
         </ion-col>
          </ion-row>
       </ion-grid>
 
-      <ion-card *ngFor="let item of nombre; let i of [1,2,3]">
+      <ion-card *ngFor="let item of ArrayAfiliado;">
       
         <ion-item color="primary" >
           <ion-icon color="light" slot="start" name="analytics"></ion-icon>
-          <ion-label>{{item}}</ion-label>
+          <ion-label>{{item.Titulo}}</ion-label>
         </ion-item>
     
         <ion-card-content>
-           {{i}}
+           {{item.Valor}}
           </ion-card-content>
     
         </ion-card>
